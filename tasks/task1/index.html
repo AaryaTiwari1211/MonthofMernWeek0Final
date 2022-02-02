@@ -18,10 +18,10 @@
             <input type="text" placeholder="Email"  required>
             </div>
             <div class="txtfield">
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password" id="email" required>
                 </div>
                 <div class="button">
-                <input type="submit" value="Login" onclick="validate()">
+                <input type="submit" value="Login" id="password" onclick="validate()">
             </div>
                 <div class="codecell_link">
                     <a href="https://www.kjscecodecell.com/">Go to the CodeCell Page!
@@ -32,7 +32,11 @@
     </form>
 </div>
     <script type="text/javascript">
+        let details = []
         function validate(){
+            details.push(document.getElementById("email").value);
+        details.push(document.getElementById("password").value);
+        console.log(details);
             alert("You have logged in successfully");
         }
     
